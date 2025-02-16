@@ -1,0 +1,67 @@
+/**
+ * -------------------------------------
+ * @file  testing.txt
+ * Lab 5 Test Results File
+ * -------------------------------------
+ * @author Myra Ribeiro, 169030590, ribe0590@mylaurier.ca
+ *
+ * @version 2025-01-06
+ *
+ * -------------------------------------
+ */
+set = name_set_initialize()
+OK
+name_set_print(set) where set is empty
+OK
+name_set_print(set) where set =
+{"Brown", "David"},
+OK
+name_set_print(set) where set =
+{"Ali", "Heider"},
+{"Fan", "Hongbing"},
+{"Brown", "David"},
+OK
+name_set_contains(set, "David", "Brown") where set =
+{"Brown", "David"},
+OK
+name_set_contains(set, "Hongbing", "Fan") where set =
+{"Ali", "Heider"},
+{"Fan", "Hongbing"},
+{"Brown", "David"},
+OK
+name_set_contains(set, "Cranston", "Snord") where set =
+{"Brown", "David"},
+OK
+name_set_contains(set, "Cranston", "Snord") where set =
+{"Ali", "Heider"},
+{"Fan", "Hongbing"},
+{"Brown", "David"},
+OK
+name_set_append(set, "Cranston", "Snord") where set =
+{"Brown", "David"},
+OK
+name_set_append(set, "Cranston", "Snord") where set =
+{"Ali", "Heider"},
+{"Fan", "Hongbing"},
+{"Brown", "David"},
+OK
+name_set_append(set, "David", "Brown") where set =
+{"Brown", "David"},
+OK
+name_set_append(set, "Hongbing", "Fan") where set =
+{"Ali", "Heider"},
+{"Fan", "Hongbing"},
+{"Brown", "David"},
+OK
+name_set_append(set, "Cranston", "Snord") where set is empty
+OK
+count = name_set_free(set) where set =
+{"Brown", "David"},
+OK
+count = name_set_free(set) where set =
+{"Ali", "Heider"},
+{"Fan", "Hongbing"},
+{"Brown", "David"},
+OK
+count = name_set_free(set) where set is empty
+OK
